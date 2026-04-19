@@ -105,15 +105,15 @@ Node *Delete(int value,Node *curr){
         }
             curr->data = temp->data;
             curr->right = Delete(temp->data,curr->right);
+            return curr;
     }     
-
-    if(value>curr->data){
+}
+     if(value>curr->data){
         curr->right = Delete(value,curr->right);
     } else {
         curr->left = Delete(value,curr->left);
     }
     return curr;
-}
 }
 int main(){
 
